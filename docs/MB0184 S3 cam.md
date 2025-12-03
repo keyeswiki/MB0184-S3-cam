@@ -4,22 +4,52 @@
 
 ## 1. 介绍
 
-S3 mini开发板是一款基于乐鑫ESP32 S3 WROOM-1-N16R8模组，其双核 Xtensa LX7 MCU 主频达 240MHz，内置 16MB FLASH、8MB SRAM 等存储，集成 2.4GHz Wi-Fi 与低功耗蓝牙(Bluetooth® LE)。它板载Type-C转串口，Type-C 转OTG，RGB LED，并且将GPIO口通过排针引出，两排排针的间距为25.5mm，方便开发者快速开发与实验。可应用于智能家居、工业自动化、医疗保健、消费电子、智慧农场等。
+S3 cam开发板是一款基于乐鑫ESP32 S3 WROOM-1-N16R8模组，其双核 Xtensa LX7 MCU 主频达 240MHz，内置 16MB FLASH、8MB SRAM 等存储，集成 2.4GHz Wi-Fi 与低功耗蓝牙(Bluetooth® LE)。它板载Type-C转串口，Type-C 转OTG，RGB LED，OV3660摄像头及SD卡接口；并且将GPIO口通过排针引出，两排排针的间距为25.5mm，方便开发者快速开发与实验。可应用于智能家居、工业自动化、医疗保健、消费电子、智慧农场等。
 
 ## 2. 规格参数
 
-- 工作电压：DC3.3V
-- 输入电压：DC3.3~DC5V 
-- 工作电流：120mA(平均)
-- ESP32模组：ESP32-S3-WROOM-1
-- ​FLASH：16MB
-- ​时钟频率：240MHZ
-- 摄像头类型：OV3660
-- SD卡：采用SD_MMC一线模式
-- USB转串口：采用Type C 接口，CH340C USB转串口芯片（可通过此接口下载程序）
-- USB转OTG：采用Type-C接口，此接口可用于debug调试或外部挂载存储设备
-- 产品尺寸：67*29mm
-
+- **工作电压**：DC3.3V
+- **输入电压**：DC3.3~DC5V 
+- **工作电流**：120mA(平均)
+- **ESP32模组**：ESP32-S3-WROOM-1
+- **​FLASH**：16MB
+- **​时钟频率**：240MHZ
+- **摄像头类型**：OV3660
+- **SD卡**：采用SD_MMC一线模式
+- **USB转串口**：采用Type C 接口，CH340C USB转串口芯片（可通过此接口下载程序）
+- **USB转OTG**：采用Type-C接口，此接口可用于debug调试或外部挂载存储设备
+- **产品尺寸**：67mm x 29mm
+- **Wi-Fi**
+ • 支持IEEE802.11b/g/n 协议
+• 在2.4GHz频带支持20MHz和40MHz频宽
+• 支持1T1R模式，数据速率高达150Mbps
+ • 无线多媒体(WMM)
+ • 帧聚合(TX/RXA-MPDU, TX/RX A-MSDU)
+ • 立即块确认(ImmediateBlock ACK)
+ • 分片和重组(Fragmentation/defragmentation)
+ • Beacon 自动监测（硬件TSF）
+• 4个虚拟Wi-Fi接口
+• 同时支持基础结构型网络(InfrastructureBSS) Station 模式、SoftAP 模式和 Station + SoftAP 混杂模式
+请注意ESP32-S3在Station 模式下扫描时，SoftAP信道会同时改变
+• 天线分集
+• 802.11mc FTM
+- **蓝牙**
+• 低功耗蓝牙(Bluetooth LE)：Bluetooth 5、Bluetooth Mesh
+ • 高功率模式，发射功率最高20dBm
+ • 速率支持125Kbps、500Kbps、1Mbps、2Mbps
+ • 广播扩展(LEAdvertising Extensions)
+ • 多广播(Multiple Advertising Sets)
+ • 信道选择(LEChannelSelection Algorithm #2)
+ • Wi-Fi 与蓝牙共存，共用同一个天线
+ - **功耗管理**
+• 通过选择时钟频率、占空比、Wi-Fi工作模式和单独控制内部器件的电源，实现精准电源控制
+• 针对典型场景设计的四种功耗模式：Active、Modem-sleep、Light-sleep、Deep-sleep
+ • Deep-sleep 模式下功耗低至7µA
+ • Deep-sleep 模式下 RTC 存储器仍保持工作
+ - **安全机制**
+• 安全启动-内部和外部存储器的权限控制
+• Flash 加密-加密和解密存储器
+• 加密硬件加速器：AES-128/256 (FIPS PUB 197)、 SHA(FIPS PUB 180-4)、RSA、随机数生成器(RNG)、 HMAC、 数字签名
 ## 3. 接口描述
 
 ![Img](./media/2.png)
