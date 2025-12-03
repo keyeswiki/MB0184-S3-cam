@@ -20,35 +20,63 @@ S3 cam开发板是一款基于乐鑫ESP32 S3 WROOM-1-N16R8模组，其双核 Xte
 - **USB转OTG**：采用Type-C接口，此接口可用于debug调试或外部挂载存储设备
 - **产品尺寸**：67mm x 29mm
 - **Wi-Fi**
+
  • 支持IEEE802.11b/g/n 协议
+
 • 在2.4GHz频带支持20MHz和40MHz频宽
+
 • 支持1T1R模式，数据速率高达150Mbps
+
  • 无线多媒体(WMM)
+
  • 帧聚合(TX/RXA-MPDU, TX/RX A-MSDU)
+
  • 立即块确认(ImmediateBlock ACK)
+
  • 分片和重组(Fragmentation/defragmentation)
+
  • Beacon 自动监测（硬件TSF）
+
 • 4个虚拟Wi-Fi接口
+
 • 同时支持基础结构型网络(InfrastructureBSS) Station 模式、SoftAP 模式和 Station + SoftAP 混杂模式
-请注意ESP32-S3在Station 模式下扫描时，SoftAP信道会同时改变
+
 • 天线分集
+
 • 802.11mc FTM
+
 - **蓝牙**
+
 • 低功耗蓝牙(Bluetooth LE)：Bluetooth 5、Bluetooth Mesh
+
  • 高功率模式，发射功率最高20dBm
+
  • 速率支持125Kbps、500Kbps、1Mbps、2Mbps
+
  • 广播扩展(LEAdvertising Extensions)
+
  • 多广播(Multiple Advertising Sets)
+
  • 信道选择(LEChannelSelection Algorithm #2)
+
  • Wi-Fi 与蓝牙共存，共用同一个天线
+
  - **功耗管理**
+ 
 • 通过选择时钟频率、占空比、Wi-Fi工作模式和单独控制内部器件的电源，实现精准电源控制
+
 • 针对典型场景设计的四种功耗模式：Active、Modem-sleep、Light-sleep、Deep-sleep
+
  • Deep-sleep 模式下功耗低至7µA
+
  • Deep-sleep 模式下 RTC 存储器仍保持工作
+
  - **安全机制**
+ 
 • 安全启动-内部和外部存储器的权限控制
+
 • Flash 加密-加密和解密存储器
+
 • 加密硬件加速器：AES-128/256 (FIPS PUB 197)、 SHA(FIPS PUB 180-4)、RSA、随机数生成器(RNG)、 HMAC、 数字签名
 ## 3. 接口描述
 
